@@ -1,0 +1,128 @@
+@import './variables/fonts';
+@import './variables/colors';
+@import './variables//mixins';
+
+
+
+.header {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+.nav-container {
+    @include flex-center;
+    justify-content: space-between;
+font-family: $bolder-poppins
+}
+
+    
+}
+
+.menu {
+    @include flex-center;
+
+    .menu-icon {
+        font-size: 70px;
+        color: $main-color;
+        cursor: pointer;
+        margin-left: 1rem;
+        position: sticky;
+
+    }
+    h1 {
+        @include trans-color;
+        margin-left: 1rem;
+    }
+}
+
+.logo {
+    h1 {
+        color: white;
+        text-transform:uppercase;
+        
+    }
+}
+
+.right {
+    ul {
+        @include flex-center;
+        margin-right: 3rem;
+        list-style: none;
+        li {
+            a {
+                text-decoration: none;
+                margin: 2rem;
+                @include trans-color;
+            }
+        }
+    }
+}
+
+
+form {
+    @include flex-center;
+    width: 600px;
+    margin-left: 5rem;
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: .5rem;
+    border: 1px solid $main-color;
+    }
+
+    button {
+        background-color: transparent;
+        margin-right: 1rem;
+        color: $main-color;
+        border: none;
+        cursor: pointer;
+    }
+
+}
+
+.container {
+    align-items: center;
+    text-align: center;
+}
+
+.slider {
+    display: grid;
+    align-items: center;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(5, 4, 4, 0.966);
+    top: 0;
+    font-family: $bolder-rubbick;
+    top: -100%;
+    background-size: cover;
+    transition: 1s ease-in-out;
+    
+}
+
+.slider.active {
+    top: 0;
+    transition: 1s ease-in-out;
+}
+
+
+.ul-menu {
+    display: grid;    
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    li {
+        padding: 60px;
+        list-style: none;
+        
+        a {
+            text-decoration: none;
+            color: $main-color;
+            font-weight: 900;
+            font-size: 50px;   
+            text-transform: uppercase;
+            text-shadow: 5px 0px 5px white;
+            letter-spacing: 2px;
+        }
+    }
+}
