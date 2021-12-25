@@ -58,27 +58,7 @@ font-family: $bolder-poppins
 }
 
 
-form {
-    @include flex-center;
-    width: 600px;
-    margin-left: 5rem;
-input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    margin-right: .5rem;
-    border: 1px solid $main-color;
-    }
 
-    button {
-        background-color: transparent;
-        margin-right: 1rem;
-        color: $main-color;
-        border: none;
-        cursor: pointer;
-    }
-
-}
 
 .container {
     align-items: center;
@@ -111,10 +91,12 @@ input {
     display: grid;    
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
+    
     li {
         padding: 60px;
         list-style: none;
-        
+        border: 1px solid white;    
+     
         a {
             text-decoration: none;
             color: $main-color;
@@ -123,6 +105,12 @@ input {
             text-transform: uppercase;
             text-shadow: 5px 0px 5px white;
             letter-spacing: 2px;
+            &:hover {
+                transform: scale(120%);
+                color: rgb(241, 165, 165);
+                transition: 1s ease;
+            }
+         
         }
     }
 }

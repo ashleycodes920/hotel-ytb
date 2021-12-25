@@ -43,11 +43,6 @@ img {
     
 }
 }
-
-
-    
-    
-
 .back {
     position: absolute;
     left: 1%;
@@ -75,14 +70,57 @@ img {
         cursor: pointer;
         font-weight: bolder;
         background-color: transparent;
+
+        &:hover{
+            background-color: $main-color;
+            color: $header-color;
+            transition: 1s;
+            transform: scale(120%);
+        }
     }
 }
 
 .bottom {
-    color: white;
+    color: $main-color;
     p {
         position: absolute;
         bottom: 3%;
         left: 3%;
     }
+}
+
+@media screen and (max-width:960px) {
+        section {
+            width: 760px;
+        }
+
+        .slides {
+
+            img {
+                width: 1240px;
+                height: 90vh;
+                object-fit: cover;
+                
+            }
+            
+            .places{
+                position: absolute;
+                font-size: 3rem;
+                left: 10%;
+                top: 50%;
+                color: $main-color;
+                font-weight: 900;
+                text-shadow: 10px 0px 30px $header-color;
+                
+            }
+            .status {
+                position: absolute;
+                top: 60%;
+                left: 10%;
+                font-size: 14px;
+                color: $main-color;
+                
+            }
+            }
+            
 }

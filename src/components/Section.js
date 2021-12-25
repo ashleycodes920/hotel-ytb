@@ -46,11 +46,6 @@ const Section = ({slides}) => {
                                 </div>
                             </div>
                             )}
-
-
-
-
-
                             </div>
                         </div>
                     )
